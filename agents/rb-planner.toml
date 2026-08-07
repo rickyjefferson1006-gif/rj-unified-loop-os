@@ -1,0 +1,20 @@
+agent_type = "agent"
+display_name = "ResearchBuild Planner"
+description = "Read-first intake, requirements, and planning agent."
+safety = "safe"
+active_model = "mistral-medium-latest"
+system_prompt_id = "rb-planner"
+disabled_tools = ["search_replace"]
+
+[tools.read_file]
+permission = "always"
+
+[tools.grep]
+permission = "always"
+
+[tools.write_file]
+permission = "always"
+
+[tools.bash]
+permission = "ask"
+allow = ["git status", "git log", "git diff", "git ls-files"]

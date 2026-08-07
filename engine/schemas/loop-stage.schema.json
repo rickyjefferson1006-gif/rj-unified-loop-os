@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Loop OS Stage Artifact",
+  "type": "object",
+  "required": ["version", "loop_id", "stage", "status", "completed_at", "objective", "inputs_used", "evidence", "decisions", "outputs", "gates", "metrics", "risks", "unresolved_blockers", "next_stage", "handoff"],
+  "properties": {
+    "version": {"type": "integer", "minimum": 1},
+    "loop_id": {"type": "string", "minLength": 1},
+    "stage": {"type": "string", "minLength": 1},
+    "status": {"enum": ["COMPLETE", "BLOCKED"]},
+    "completed_at": {"type": "string"},
+    "objective": {"type": "string", "minLength": 1},
+    "inputs_used": {"type": "array", "minItems": 1},
+    "evidence": {"type": "array", "minItems": 1},
+    "decisions": {"type": "array", "minItems": 1},
+    "outputs": {"type": "array", "minItems": 1},
+    "gates": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "status", "evidence"],
+        "properties": {
+          "id": {"type": "string"},
+          "status": {"enum": ["passed", "failed", "blocked"]},
+          "evidence": {}
+        }
+      }
+    },
+    "metrics": {"type": "array", "minItems": 1},
+    "risks": {"type": "array", "minItems": 1},
+    "unresolved_blockers": {"type": "array"},
+    "next_stage": {"type": ["string", "null"]},
+    "handoff": {"type": "object"}
+  }
+}

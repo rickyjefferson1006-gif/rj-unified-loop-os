@@ -1,0 +1,23 @@
+agent_type = "agent"
+display_name = "Full Experience Builder"
+description = "Builds website, authenticated app, CRM, forms, integrations, analytics, and content system."
+safety = "neutral"
+active_model = "mistral-medium-latest"
+system_prompt_id = "xp-builder"
+
+[tools.read_file]
+permission = "always"
+
+[tools.grep]
+permission = "always"
+
+[tools.write_file]
+permission = "always"
+
+[tools.search_replace]
+permission = "always"
+
+[tools.bash]
+permission = "always"
+deny = ["rm -rf *", "git reset --hard *", "git clean -fd*", "git push --force*", "terraform destroy*", "kubectl delete*", "wrangler deploy *", "wrangler delete *"]
+

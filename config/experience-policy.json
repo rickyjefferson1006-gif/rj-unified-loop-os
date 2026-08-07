@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "brand": {
+    "require_design_tokens": true,
+    "require_all_component_states": true,
+    "require_responsive_viewports": true,
+    "require_wcag_level": "AA"
+  },
+  "content": {
+    "require_people_first_review": true,
+    "require_author_and_reviewer": true,
+    "require_citations_for_material_claims": true,
+    "require_original_value": true,
+    "forbid_scaled_content_abuse": true,
+    "require_editorial_workflow": true,
+    "minimum_topic_clusters": 3
+  },
+  "search": {
+    "require_unique_titles": true,
+    "require_unique_descriptions": true,
+    "require_canonical_urls": true,
+    "require_indexing_directives": true,
+    "require_xml_sitemap": true,
+    "require_robots_txt": true,
+    "require_structured_data": true,
+    "require_open_graph": true,
+    "require_social_cards": true,
+    "require_internal_link_graph": true,
+    "require_breadcrumbs": true,
+    "require_answer_blocks": true,
+    "require_entity_graph": true,
+    "require_indexnow_plan": true
+  },
+  "legal": {
+    "require_verified_business_identity": true,
+    "require_verified_jurisdictions": true,
+    "require_data_inventory": true,
+    "require_processing_purpose_inventory": true,
+    "require_cookie_and_tracker_inventory": true,
+    "require_terms": true,
+    "require_privacy_policy": true,
+    "require_accessibility_statement": true,
+    "require_general_disclaimer": true,
+    "require_cookie_notice_when_applicable": true,
+    "require_dmca_policy_when_applicable": true,
+    "require_refund_policy_when_applicable": true,
+    "require_sms_and_email_consent_language_when_applicable": true,
+    "require_legal_review_for_high_risk_domains": true,
+    "forbid_unresolved_placeholders": true
+  },
+  "crm": {
+    "require_form_to_crm_tests": true,
+    "require_consent_evidence": true,
+    "require_source_attribution": true,
+    "require_deduplication": true,
+    "require_idempotency": true,
+    "require_audit_logs": true,
+    "require_rbac": true,
+    "require_retention_and_deletion": true
+  },
+  "verification": {
+    "required_gates": [
+      "unit_tests",
+      "integration_tests",
+      "production_build",
+      "e2e_user_journeys",
+      "forms_and_crm",
+      "authentication_and_rbac",
+      "internal_links",
+      "external_links",
+      "redirects_and_status_codes",
+      "robots_and_sitemap",
+      "canonical_and_indexing",
+      "structured_data",
+      "open_graph_and_social_cards",
+      "accessibility",
+      "lighthouse",
+      "core_web_vitals_budget",
+      "responsive_visual_regression",
+      "security_scan",
+      "dependency_scan",
+      "secret_scan",
+      "privacy_and_consent",
+      "legal_page_review",
+      "backup_and_rollback"
+    ],
+    "minimum_lighthouse_scores": {
+      "performance": 90,
+      "accessibility": 95,
+      "best_practices": 95,
+      "seo": 95
+    },
+    "maximum_internal_dead_links": 0,
+    "maximum_external_dead_links": 0
+  },
+  "automation": {
+    "vibe_command": "vibe",
+    "maximum_phase_attempts": 3,
+    "allow_production_deploy": false
+  }
+}
+

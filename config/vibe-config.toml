@@ -1,0 +1,16 @@
+default_agent = "rb-planner"
+enabled_skills = ["research-build", "experience-build", "loop-os"]
+enable_auto_update = true
+enable_notifications = true
+
+[tools.bash]
+permission = "ask"
+deny = [
+  "rm -rf *",
+  "git reset --hard *",
+  "git clean -fd*",
+  "git push --force*",
+  "terraform destroy*",
+  "kubectl delete*",
+  "wrangler delete*"
+]

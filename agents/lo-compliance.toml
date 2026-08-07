@@ -1,0 +1,18 @@
+agent_type = "agent"
+display_name = "Compliance and Financial Operations Specialist"
+description = "Executes fact-specific credit, consumer, privacy, business-finance, and document-governance stages with mandatory approvals."
+safety = "strict"
+active_model = "mistral-large-latest"
+system_prompt_id = "lo-compliance"
+
+[tools.read_file]
+permission = "always"
+[tools.grep]
+permission = "always"
+[tools.write_file]
+permission = "always"
+[tools.search_replace]
+permission = "always"
+[tools.bash]
+permission = "ask"
+deny = ["rm -rf *", "git reset --hard *", "git clean -fd*", "git push --force*", "wrangler deploy *", "terraform apply *", "kubectl apply *"]

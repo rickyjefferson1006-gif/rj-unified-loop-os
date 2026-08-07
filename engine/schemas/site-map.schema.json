@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExperienceBuild Site Map",
+  "type": "object",
+  "required": ["status", "pages", "journeys"],
+  "properties": {
+    "status": {"enum": ["COMPLETE", "BLOCKED"]},
+    "pages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "path", "purpose", "audience", "page_type", "primary_query", "intent", "title", "description", "canonical", "indexing", "schema_types", "internal_links", "primary_cta"],
+        "properties": {
+          "id": {"type": "string"},
+          "path": {"type": "string", "pattern": "^/"},
+          "purpose": {"type": "string"},
+          "audience": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "page_type": {"type": "string"},
+          "primary_query": {"type": "string"},
+          "intent": {"type": "string"},
+          "title": {"type": "string"},
+          "description": {"type": "string"},
+          "canonical": {"type": "string"},
+          "indexing": {"enum": ["index", "noindex", "authenticated"]},
+          "schema_types": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "internal_links": {"type": "array", "items": {"type": "string"}},
+          "primary_cta": {"type": "string"}
+        }
+      }
+    },
+    "journeys": {"type": "array"}
+  }
+}
+

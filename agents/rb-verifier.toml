@@ -1,0 +1,21 @@
+agent_type = "agent"
+display_name = "ResearchBuild Verifier"
+description = "Independent evidence, requirement, test, security, and delivery verifier."
+safety = "safe"
+active_model = "mistral-medium-latest"
+system_prompt_id = "rb-verifier"
+disabled_tools = ["search_replace"]
+
+[tools.read_file]
+permission = "always"
+
+[tools.grep]
+permission = "always"
+
+[tools.write_file]
+permission = "always"
+
+[tools.bash]
+permission = "always"
+deny = ["rm -rf *", "git reset --hard *", "git clean -fd*", "git push *", "terraform *", "kubectl *", "wrangler deploy *", "wrangler delete *"]
+

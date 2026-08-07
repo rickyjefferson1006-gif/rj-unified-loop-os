@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "research": {
+    "minimum_total_sources": 10,
+    "minimum_official_sources": 3,
+    "minimum_papers": 2,
+    "minimum_repositories": 2,
+    "minimum_standards": 1,
+    "maximum_source_age_days": 1095,
+    "allow_older_foundational_sources": true,
+    "require_access_date": true,
+    "require_claim_mapping": true
+  },
+  "requirements": {
+    "require_acceptance_criteria": true,
+    "require_test_mapping": true,
+    "require_evidence_mapping": true,
+    "require_nonfunctional_requirements": true
+  },
+  "quality_commands": [],
+  "security": {
+    "block_severities": ["critical", "high"],
+    "require_dependency_scan": true,
+    "require_secret_scan": true,
+    "require_sbom": true,
+    "require_threat_model": true
+  },
+  "completion": {
+    "forbid_placeholder_markers": true,
+    "placeholder_markers": ["TODO", "FIXME", "PLACEHOLDER", "COMING SOON", "NotImplementedError"],
+    "production_paths": ["src", "app", "apps", "packages", "workers"],
+    "require_nonempty_quality_commands": true,
+    "required_verification_gates": ["tests", "build", "dependency_scan", "secret_scan", "sbom"],
+    "require_clean_quality_gates": true,
+    "require_delivery_report": true
+  },
+  "automation": {
+    "vibe_command": "vibe",
+    "maximum_phase_attempts": 3,
+    "allow_production_deploy": false
+  }
+}

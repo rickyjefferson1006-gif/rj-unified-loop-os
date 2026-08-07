@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "completion": {
+    "required_stage_fields": [
+      "objective",
+      "inputs_used",
+      "evidence",
+      "decisions",
+      "outputs",
+      "gates",
+      "metrics",
+      "risks",
+      "next_stage",
+      "handoff"
+    ],
+    "forbid_unresolved_blockers": true,
+    "require_all_gates_passed": true,
+    "require_evidence_for_material_claims": true,
+    "require_immutable_input_hashes": true
+  },
+  "approval": {
+    "risk_levels_requiring_final_approval": ["high", "critical"],
+    "always_require_human_approval_for": [
+      "production deployment",
+      "external communication",
+      "credit dispute delivery",
+      "regulatory complaint submission",
+      "credit or funding application",
+      "grant or contract submission",
+      "legal policy publication",
+      "marketing campaign activation",
+      "money movement",
+      "refund or payout",
+      "destructive data operation",
+      "credential or permission expansion"
+    ]
+  },
+  "automation": {
+    "vibe_command": "vibe",
+    "maximum_stage_attempts": 3,
+    "allow_production_deploy": false,
+    "allow_external_messages": false,
+    "allow_financial_submission": false,
+    "allow_legal_submission": false
+  }
+}

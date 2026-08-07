@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ResearchBuild Verification",
+  "type": "object",
+  "required": ["status", "requirement_results", "quality_gates", "blocking_findings"],
+  "properties": {
+    "status": {"enum": ["COMPLETE", "BLOCKED"]},
+    "requirement_results": {"type": "array"},
+    "quality_gates": {"type": "array"},
+    "blocking_findings": {"type": "array"},
+    "residual_risks": {"type": "array"}
+  }
+}
+

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ResearchBuild to ExperienceBuild Handoff",
+  "type": "object",
+  "required": ["version", "status", "source_stage", "target_stage", "artifacts", "required_downstream_outcomes"],
+  "properties": {
+    "version": {"type": "integer", "minimum": 1},
+    "status": {"const": "READY"},
+    "source_stage": {"const": "research-build"},
+    "target_stage": {"const": "experience-build"},
+    "artifacts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["path", "sha256"],
+        "properties": {
+          "path": {"type": "string"},
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+        }
+      }
+    },
+    "required_downstream_outcomes": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+  }
+}
+

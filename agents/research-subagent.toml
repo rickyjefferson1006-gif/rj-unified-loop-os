@@ -1,0 +1,6 @@
+agent_type = "subagent"
+display_name = "Primary Source Research"
+description = "Independently checks primary technical sources, papers, standards, and repositories."
+safety = "safe"
+enabled_tools = ["read_file", "grep"]
+

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ResearchBuild Requirements",
+  "type": "object",
+  "required": ["status", "requirements"],
+  "properties": {
+    "status": {"enum": ["COMPLETE", "BLOCKED"]},
+    "requirements": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "statement", "acceptance_criteria", "evidence_ids", "test_ids", "risk"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^(FR|NFR|SEC|OPS|DATA)-[0-9]{3,}$"},
+          "statement": {"type": "string", "minLength": 1},
+          "acceptance_criteria": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "evidence_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "test_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "risk": {"enum": ["low", "medium", "high", "critical"]}
+        }
+      }
+    }
+  }
+}
+

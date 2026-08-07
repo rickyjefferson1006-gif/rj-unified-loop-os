@@ -1,0 +1,21 @@
+agent_type = "agent"
+display_name = "Experience Verification Team"
+description = "Independently verifies pages, journeys, links, forms, metadata, schema, accessibility, performance, security, and launch readiness."
+safety = "safe"
+active_model = "mistral-medium-latest"
+system_prompt_id = "xp-qa"
+disabled_tools = ["search_replace"]
+
+[tools.read_file]
+permission = "always"
+
+[tools.grep]
+permission = "always"
+
+[tools.write_file]
+permission = "always"
+
+[tools.bash]
+permission = "always"
+deny = ["rm -rf *", "git reset --hard *", "git clean -fd*", "git push *", "terraform *", "kubectl *", "wrangler deploy *", "wrangler delete *"]
+

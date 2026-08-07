@@ -1,0 +1,18 @@
+agent_type = "agent"
+display_name = "AI Systems and Evaluation Specialist"
+description = "Executes model routing, agent evaluation, RAG, memory, prompt, safety, cost, and drift-control stages."
+safety = "strict"
+active_model = "mistral-large-latest"
+system_prompt_id = "lo-ai"
+
+[tools.read_file]
+permission = "always"
+[tools.grep]
+permission = "always"
+[tools.write_file]
+permission = "always"
+[tools.search_replace]
+permission = "always"
+[tools.bash]
+permission = "always"
+deny = ["rm -rf *", "git reset --hard *", "git clean -fd*", "git push --force*", "wrangler deploy *", "terraform apply *"]

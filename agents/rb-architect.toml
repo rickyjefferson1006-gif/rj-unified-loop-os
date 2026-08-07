@@ -1,0 +1,20 @@
+agent_type = "agent"
+display_name = "ResearchBuild Architect"
+description = "Evidence-driven architecture and failure-mode design agent."
+safety = "safe"
+active_model = "mistral-medium-latest"
+system_prompt_id = "rb-architect"
+
+[tools.read_file]
+permission = "always"
+
+[tools.grep]
+permission = "always"
+
+[tools.write_file]
+permission = "always"
+
+[tools.bash]
+permission = "ask"
+allow = ["git status", "git log", "git diff", "git ls-files"]
+

@@ -1,0 +1,23 @@
+agent_type = "agent"
+display_name = "Content and Authority Architect"
+description = "Creates people-first pages, topic clusters, answer blocks, blogs, editorial controls, and citation governance."
+safety = "neutral"
+active_model = "mistral-medium-latest"
+system_prompt_id = "xp-content"
+
+[tools.read_file]
+permission = "always"
+
+[tools.grep]
+permission = "always"
+
+[tools.write_file]
+permission = "always"
+
+[tools.search_replace]
+permission = "always"
+
+[tools.bash]
+permission = "ask"
+allow = ["git status", "git diff", "git ls-files"]
+

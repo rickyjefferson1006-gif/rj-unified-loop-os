@@ -1,0 +1,23 @@
+agent_type = "agent"
+display_name = "Search and Entity Architect"
+description = "Builds technical SEO, GEO, AEO, AIO, schema, entity graphs, metadata, and internal linking."
+safety = "neutral"
+active_model = "mistral-medium-latest"
+system_prompt_id = "xp-search"
+
+[tools.read_file]
+permission = "always"
+
+[tools.grep]
+permission = "always"
+
+[tools.write_file]
+permission = "always"
+
+[tools.search_replace]
+permission = "always"
+
+[tools.bash]
+permission = "always"
+deny = ["rm -rf *", "git reset --hard *", "git clean -fd*", "git push *", "wrangler deploy *", "wrangler delete *"]
+

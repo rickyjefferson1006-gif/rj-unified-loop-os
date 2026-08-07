@@ -1,0 +1,28 @@
+# Secrets — NEVER commit
+.env
+*.pem
+*.key
+credentials.json
+service-account.json
+*-service-account.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Loop OS runtime
+.loop-os/
+.research-build/
+.experience-build/
+*.tmp
+
+# IDE
+.vscode/
+.idea/

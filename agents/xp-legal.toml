@@ -1,0 +1,21 @@
+agent_type = "agent"
+display_name = "Web Legal and Consent Analyst"
+description = "Determines policy applicability and drafts fact-specific pages for qualified legal review."
+safety = "safe"
+active_model = "mistral-medium-latest"
+system_prompt_id = "xp-legal"
+disabled_tools = ["search_replace"]
+
+[tools.read_file]
+permission = "always"
+
+[tools.grep]
+permission = "always"
+
+[tools.write_file]
+permission = "always"
+
+[tools.bash]
+permission = "ask"
+allow = ["git status", "git diff", "git ls-files"]
+

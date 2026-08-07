@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExperienceBuild Legal Applicability Matrix",
+  "type": "object",
+  "required": ["status", "business_identity", "jurisdictions", "data_inventory", "processing_purposes", "cookies_and_trackers", "pages"],
+  "properties": {
+    "status": {"enum": ["COMPLETE", "BLOCKED"]},
+    "business_identity": {"type": "object"},
+    "jurisdictions": {"type": "array", "minItems": 1},
+    "data_inventory": {"type": "array", "minItems": 1},
+    "processing_purposes": {"type": "array", "minItems": 1},
+    "cookies_and_trackers": {"type": "array"},
+    "pages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "applicable", "basis", "status", "unresolved_placeholders"],
+        "properties": {
+          "type": {"type": "string"},
+          "applicable": {"type": "boolean"},
+          "basis": {"type": "array"},
+          "status": {"enum": ["approved", "not_applicable", "blocked"]},
+          "unresolved_placeholders": {"type": "array"}
+        }
+      }
+    }
+  }
+}
+

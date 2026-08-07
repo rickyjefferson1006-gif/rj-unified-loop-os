@@ -1,0 +1,18 @@
+agent_type = "agent"
+display_name = "Independent Loop Verifier"
+description = "Independently checks evidence, outputs, tests, approvals, risks, audit trails, and completion claims for every loop family."
+safety = "strict"
+active_model = "mistral-large-latest"
+system_prompt_id = "lo-verifier"
+
+[tools.read_file]
+permission = "always"
+[tools.grep]
+permission = "always"
+[tools.write_file]
+permission = "always"
+[tools.search_replace]
+permission = "always"
+[tools.bash]
+permission = "always"
+deny = ["rm -rf *", "git reset --hard *", "git clean -fd*", "git push --force*", "wrangler deploy *", "terraform apply *", "kubectl apply *"]
