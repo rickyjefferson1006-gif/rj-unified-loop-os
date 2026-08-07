@@ -1,0 +1,40 @@
+# =============================================================================
+# RJ Unified Loop OS — Cloudflare Wrangler Config
+# Account: kali1 (9a3c0d0f1bc8bb5c83574905b6e13680)
+# =============================================================================
+name = "rj-unified-loop-os"
+main = "engine/loop_os.py"
+compatibility_date = "2026-08-07"
+
+# Cloudflare Pages deployment (static assets + functions)
+[env.production]
+account_id = "9a3c0d0f1bc8bb5c83574905b6e13680"
+
+# R2 bucket for loop artifacts
+[[r2_buckets]]
+binding = "LOOP_ARTIFACTS"
+bucket_name = "rj-loop-artifacts"
+
+# D1 database for loop state
+[[d1_databases]]
+binding = "LOOP_DB"
+database_name = "rj-loop-state"
+database_id = ""
+
+# KV namespace for caching
+[[kv_namespaces]]
+binding = "LOOP_CACHE"
+id = ""
+
+# Queue for async loop stages
+[[queues]]
+producers = ["rj-loop-queue"]
+
+# Workers AI binding
+[ai]
+binding = "AI"
+
+# Vectorize for embeddings/RAG
+[[vectorize]]
+binding = "VECTORIZE"
+index_name = "rj-knowledge"
