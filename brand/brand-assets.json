@@ -1,0 +1,238 @@
+{
+  "brand_version": "10.0",
+  "brand_name": "RJ Business Solutions",
+  "total_assets": 84,
+  "last_updated": "2026-08-01",
+  "sections": [
+    {
+      "id": "01-photos",
+      "name": "Photos of Rick",
+      "description": "Real portraits of founder Rick Jefferson used throughout social and web assets",
+      "count": 6,
+      "files": [
+        "rick-hero.jpg",
+        "rick-portrait.jpg",
+        "rick-vision.jpg",
+        "rick-vault.jpg",
+        "rick-signing.jpg",
+        "rick-circuit.jpg"
+      ]
+    },
+    {
+      "id": "02-print-identity",
+      "name": "Print & Identity",
+      "description": "Print stationery and physical identity assets",
+      "count": 5,
+      "files": [
+        "Letterhead.html",
+        "Invoice.html",
+        "Business Cards.html",
+        "Envelope.html",
+        "Presentation Folder.html"
+      ]
+    },
+    {
+      "id": "03-email-system",
+      "name": "Email System",
+      "description": "Email templates for ESP integration (Mailchimp, ConvertKit, Klaviyo, GoHighLevel)",
+      "count": 4,
+      "files": [
+        "Email Header.html",
+        "Email Signature.html",
+        "Email Newsletter.html",
+        "Email Drip Sequence.html"
+      ]
+    },
+    {
+      "id": "04-social-media",
+      "name": "Social Media",
+      "description": "Social media kits for all major platforms plus avatars and backgrounds",
+      "count": 8,
+      "files": [
+        "Social Banners.html",
+        "LinkedIn Kit.html",
+        "IG Feed Series.html",
+        "IG Story Series.html",
+        "X + TikTok Kit.html",
+        "YouTube + Podcast Kit.html",
+        "Avatars + Favicons.html",
+        "Backgrounds.html"
+      ]
+    },
+    {
+      "id": "05-sales-decks",
+      "name": "Sales Decks & Docs",
+      "description": "Sales enablement and pitch materials",
+      "count": 8,
+      "files": [
+        "Pitch Deck.html",
+        "Sales Deck.html",
+        "One Pager.html",
+        "Rate Card.html",
+        "Quote Estimate.html",
+        "Proposal.html",
+        "Case Study.html",
+        "Testimonial Cards.html"
+      ]
+    },
+    {
+      "id": "06-legal-contracts",
+      "name": "Legal & Contracts",
+      "description": "Legal documents, contracts, and compliance templates",
+      "count": 5,
+      "files": [
+        "Contract Cover.html",
+        "Contract Addendums.html",
+        "NDA.html",
+        "Referral Partner Agreement.html",
+        "Dispute Letter.html"
+      ]
+    },
+    {
+      "id": "07-product-web",
+      "name": "Product & Web",
+      "description": "Interactive digital surfaces and web pages",
+      "count": 7,
+      "files": [
+        "Landing Page.html",
+        "Dashboard.html",
+        "Digital Card.html",
+        "Utility Pages.html",
+        "PWA Manifest.html",
+        "Meet Rick.html",
+        "Team + Careers.html"
+      ]
+    },
+    {
+      "id": "08-ads-paid",
+      "name": "Ads & Paid Media",
+      "description": "Paid advertising creatives and app store assets",
+      "count": 3,
+      "files": [
+        "Ad Creatives.html",
+        "Feature Launch.html",
+        "App Store Screenshots.html"
+      ]
+    },
+    {
+      "id": "09-video-podcast",
+      "name": "Video & Podcast",
+      "description": "Video thumbnails, podcast cards, and media overlays",
+      "count": 4,
+      "files": [
+        "Video Thumbnails.html",
+        "Podcast Cards.html",
+        "Testimonial Video.html",
+        "Zoom Backgrounds.html"
+      ]
+    },
+    {
+      "id": "10-physical-merch",
+      "name": "Physical & Merch",
+      "description": "Physical merchandise, event materials, and branded goods",
+      "count": 11,
+      "files": [
+        "Phone Wallpapers.html",
+        "Merch Mockups.html",
+        "Swag Box.html",
+        "Stickers + Tags.html",
+        "Wrapping Paper.html",
+        "Popup Display.html",
+        "Event Booth.html",
+        "Holiday Cards.html",
+        "Gift Card.html",
+        "Referral Card.html",
+        "Certificate.html"
+      ]
+    },
+    {
+      "id": "11-credit-technology",
+      "name": "Credit Technology",
+      "description": "Credit repair technology deliverables",
+      "count": 1,
+      "files": [
+        "Credit Report.html"
+      ]
+    },
+    {
+      "id": "12-client-ops",
+      "name": "Client Ops",
+      "description": "Client operations and onboarding templates",
+      "count": 4,
+      "files": [
+        "Onboarding Welcome.html",
+        "Receipt Thank You.html",
+        "SMS Templates.html",
+        "Systems Worksheets.html"
+      ]
+    },
+    {
+      "id": "13-investor-corporate",
+      "name": "Investor & Corporate",
+      "description": "Investor relations, corporate documents, and growth materials",
+      "count": 6,
+      "files": [
+        "Growth Playbook.html",
+        "Annual Report.html",
+        "Investor One Pager.html",
+        "Whitepaper.html",
+        "Media Kit.html",
+        "Employee Handbook.html"
+      ]
+    },
+    {
+      "id": "14-interactive-forms",
+      "name": "Interactive Forms",
+      "description": "Live, multi-step, Cloudflare-ready interactive forms",
+      "count": 9,
+      "files": [
+        "Credit Qualify.html",
+        "Funding Qualify.html",
+        "Universal Funnel.html",
+        "Service Intake.html",
+        "Growth Audit.html",
+        "Whitelabel Application.html",
+        "Partnership Application.html",
+        "Podcast Guest.html",
+        "forms.css"
+      ]
+    },
+    {
+      "id": "15-founder-documents",
+      "name": "Founder Documents",
+      "description": "Founder legal, finance, and governance documents",
+      "count": 6,
+      "files": [
+        "Cap Table.html",
+        "Valuation Summary.html",
+        "Term Sheet.html",
+        "Operating Agreement.html",
+        "Financial Model.html",
+        "Vesting Agreement.html"
+      ]
+    },
+    {
+      "id": "16-developer-backend",
+      "name": "Developer & Backend",
+      "description": "Developer handoff specifications and backend architecture",
+      "count": 2,
+      "files": [
+        "DEVELOPER-HANDOFF-README.md",
+        "CLOUDFLARE-BACKEND.md"
+      ]
+    },
+    {
+      "id": "00-master-index",
+      "name": "Master Index",
+      "description": "Top-level navigation and design token source files",
+      "count": 5,
+      "files": [
+        "Brand Kit.html",
+        "Asset Pack.html",
+        "Forms Hub.html",
+        "brand.css",
+        "deck_stage.js"
+      ]
+    }
+  ]
+}

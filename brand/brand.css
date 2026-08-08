@@ -1,0 +1,499 @@
+/* ==========================================================================
+   RJ Business Solutions — Brand Design Tokens v5.0
+   Portable CSS custom-property system + utility classes
+   Drop into any project. No build step required.
+   ========================================================================== */
+
+/* -------------------------------------------------------------------------
+   1. Font Imports
+   ------------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+/* -------------------------------------------------------------------------
+   2. CSS Custom Properties
+   ------------------------------------------------------------------------- */
+
+:root {
+  /* ── Primary palette ─────────────────────────────────────────────────── */
+  --rj-blue:       #2563eb;   /* Primary CTA, links, focus rings */
+  --rj-sky:        #0ea5e9;   /* Accents, gradient stops */
+  --rj-deep:       #1e3a8a;   /* Section dividers, dark headers */
+  --rj-navy:       #0f172a;   /* Body text, hero backgrounds */
+
+  /* ── Neutrals ─────────────────────────────────────────────────────────── */
+  --rj-white:      #ffffff;
+  --rj-soft:       #f8fafc;   /* Page background */
+  --rj-light:      #eff6ff;   /* Section wash, hover backgrounds */
+  --rj-border:     #bfdbfe;
+  --rj-muted:      #dbeafe;   /* Chips, badges */
+  --rj-line:       #e2e8f0;   /* Borders, dividers */
+
+  /* ── Semantic ─────────────────────────────────────────────────────────── */
+  --rj-success:    #10b981;
+  --rj-warning:    #f59e0b;
+  --rj-danger:     #ef4444;
+
+  /* ── Text ─────────────────────────────────────────────────────────────── */
+  --rj-text:        #0f172a;
+  --rj-muted-text:  #475569;
+
+  /* ── Font families ────────────────────────────────────────────────────── */
+  --font-head:  "Space Grotesk", system-ui, sans-serif;
+  --font-body:  "Inter", system-ui, sans-serif;
+  --font-mono:  "Space Grotesk", ui-monospace, monospace;
+
+  /* ── Type scale ──────────────────────────────────────────────────────── */
+  --text-h1:    72px;
+  --text-h2:    48px;
+  --text-h3:    28px;
+  --text-h4:    20px;
+  --text-body:  16px;
+  --text-small: 14px;
+  --text-mono:  12px;
+
+  /* ── Font weights ────────────────────────────────────────────────────── */
+  --weight-h1:    600;
+  --weight-h2:    600;
+  --weight-h3:    600;
+  --weight-h4:    600;
+  --weight-body:  400;
+  --weight-small: 400;
+  --weight-mono:  600;
+
+  /* ── Line heights ────────────────────────────────────────────────────── */
+  --leading-h1:    1;
+  --leading-h2:    1.1;
+  --leading-h3:    1.2;
+  --leading-h4:    1.3;
+  --leading-body:  1.6;
+  --leading-small: 1.5;
+  --leading-mono:  1.4;
+
+  /* ── Letter spacing ──────────────────────────────────────────────────── */
+  --track-h1:    -0.02em;
+  --track-h2:    -0.02em;
+  --track-h3:    -0.01em;
+  --track-mono:   0.14em;
+
+  /* ── Spacing scale (px) ──────────────────────────────────────────────── */
+  --space-1:   4px;
+  --space-1_5: 6px;
+  --space-2:   8px;
+  --space-2_5: 10px;
+  --space-3:   12px;
+  --space-3_5: 14px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-7:   28px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --space-14:  56px;
+  --space-16:  64px;
+  --space-20:  80px;
+  --space-24:  100px;
+  --space-28:  120px;
+
+  /* ── Border radius ───────────────────────────────────────────────────── */
+  --radius-tight:  4px;    /* Labels, badges */
+  --radius-sm:      6px;    /* Small chips */
+  --radius-btn:     8px;    /* Buttons */
+  --radius-input:  10px;    /* Inputs, small cards */
+  --radius-card:   14px;    /* Standard cards */
+  --radius-lg:     20px;    /* Hero cards, feature blocks */
+  --radius-pill:  999px;    /* Pill badges, tokens */
+
+  /* ── Shadows ──────────────────────────────────────────────────────────── */
+  --shadow-card:      0 20px 40px rgba(15, 23, 42, 0.08);
+  --shadow-card-hover: 0 20px 40px rgba(15, 23, 42, 0.15);
+  --shadow-featured:  0 30px 60px rgba(15, 23, 42, 0.15);
+  --shadow-deep:      0 30px 60px rgba(15, 23, 42, 0.25);
+  --shadow-cta:       0 4px 14px rgba(37, 99, 235, 0.35);
+  --shadow-cta-hover: 0 8px 20px rgba(37, 99, 235, 0.4);
+
+  /* ── Gradients ────────────────────────────────────────────────────────── */
+  --grad-primary: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+  --grad-dark:    linear-gradient(135deg, #0f172a 0%, #1e3a8a 55%, #2563eb 100%);
+  --grad-light:   linear-gradient(180deg, #ffffff 0%, #eff6ff 100%);
+
+  /* ── Transitions ──────────────────────────────────────────────────────── */
+  --ease-out:  150ms ease;
+  --ease-spring: 500ms ease-out;
+}
+
+/* -------------------------------------------------------------------------
+   3. Typography Utility Classes
+   ------------------------------------------------------------------------- */
+
+.h1, .display { font-family: var(--font-head); font-size: var(--text-h1); font-weight: var(--weight-h1); line-height: var(--leading-h1); letter-spacing: var(--track-h1); }
+.h2            { font-family: var(--font-head); font-size: var(--text-h2); font-weight: var(--weight-h2); line-height: var(--leading-h2); letter-spacing: var(--track-h2); }
+.h3            { font-family: var(--font-head); font-size: var(--text-h3); font-weight: var(--weight-h3); line-height: var(--leading-h3); letter-spacing: var(--track-h3); }
+.h4            { font-family: var(--font-head); font-size: var(--text-h4); font-weight: var(--weight-h4); line-height: var(--leading-h4); }
+.body          { font-family: var(--font-body); font-size: var(--text-body); font-weight: var(--weight-body); line-height: var(--leading-body); }
+.small         { font-family: var(--font-body); font-size: var(--text-small); font-weight: var(--weight-small); line-height: var(--leading-small); }
+.mono          { font-family: var(--font-mono); font-size: var(--text-mono); font-weight: var(--weight-mono); line-height: var(--leading-mono); letter-spacing: var(--track-mono); text-transform: uppercase; }
+
+/* -------------------------------------------------------------------------
+   4. Color Utility Classes
+   ------------------------------------------------------------------------- */
+
+.text-blue   { color: var(--rj-blue); }
+.text-sky    { color: var(--rj-sky); }
+.text-deep   { color: var(--rj-deep); }
+.text-navy   { color: var(--rj-navy); }
+.text-muted  { color: var(--rj-muted-text); }
+.text-success { color: var(--rj-success); }
+.text-warning { color: var(--rj-warning); }
+.text-danger  { color: var(--rj-danger); }
+
+.bg-blue     { background-color: var(--rj-blue); }
+.bg-sky      { background-color: var(--rj-sky); }
+.bg-deep     { background-color: var(--rj-deep); }
+.bg-navy     { background-color: var(--rj-navy); }
+.bg-soft     { background-color: var(--rj-soft); }
+.bg-light    { background-color: var(--rj-light); }
+.bg-white    { background-color: var(--rj-white); }
+
+.grad-primary { background: var(--grad-primary); }
+.grad-dark    { background: var(--grad-dark); }
+.grad-light   { background: var(--grad-light); }
+
+/* -------------------------------------------------------------------------
+   5. Button Base Classes
+   ------------------------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--font-head);
+  font-size: var(--text-small);
+  font-weight: 600;
+  line-height: 1;
+  border: none;
+  border-radius: var(--radius-btn);
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform var(--ease-out), box-shadow var(--ease-out);
+  user-select: none;
+}
+
+.btn:focus-visible {
+  outline: 4px solid rgba(37, 99, 235, 0.12);
+  outline-offset: 2px;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+/* ── Variants ───────────────────────────────────────────────────────────── */
+
+.btn-primary {
+  background: var(--rj-blue);
+  color: var(--rj-white);
+  box-shadow: var(--shadow-cta);
+}
+.btn-primary:hover {
+  background: #1d4ed8;
+  box-shadow: var(--shadow-cta-hover);
+}
+
+.btn-gradient {
+  background: var(--grad-primary);
+  color: var(--rj-white);
+  box-shadow: var(--shadow-cta);
+}
+.btn-gradient:hover {
+  box-shadow: var(--shadow-cta-hover);
+}
+
+.btn-dark {
+  background: var(--rj-navy);
+  color: var(--rj-white);
+}
+.btn-dark:hover {
+  background: #1e293b;
+  box-shadow: var(--shadow-card-hover);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--rj-blue);
+  border: 1.5px solid var(--rj-border);
+}
+.btn-ghost:hover {
+  background: var(--rj-light);
+  border-color: var(--rj-blue);
+}
+
+.btn-light {
+  background: var(--rj-light);
+  color: var(--rj-blue);
+}
+.btn-light:hover {
+  background: var(--rj-muted);
+}
+
+/* -------------------------------------------------------------------------
+   6. Card Classes
+   ------------------------------------------------------------------------- */
+
+.card {
+  background: var(--rj-white);
+  border: 1px solid var(--rj-line);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--ease-out), border-color var(--ease-out), box-shadow var(--ease-out);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: var(--rj-blue);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.card-featured {
+  border: none;
+  background: var(--grad-dark);
+  color: var(--rj-white);
+  box-shadow: var(--shadow-featured);
+}
+
+.card-hero {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-deep);
+}
+
+/* -------------------------------------------------------------------------
+   7. Input Classes
+   ------------------------------------------------------------------------- */
+
+.input {
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  border: 1.5px solid var(--rj-line);
+  border-radius: var(--radius-input);
+  background: var(--rj-white);
+  color: var(--rj-text);
+  outline: none;
+  transition: border-color var(--ease-out), box-shadow var(--ease-out);
+}
+
+.input:focus {
+  border-color: var(--rj-blue);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.input::placeholder {
+  color: var(--rj-muted-text);
+}
+
+/* -------------------------------------------------------------------------
+   8. Badge / Pill / Chip Classes
+   ------------------------------------------------------------------------- */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: 500;
+  border-radius: var(--radius-tight);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-3);
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: 500;
+  border-radius: var(--radius-pill);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-2) var(--space-4);
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: 500;
+  background: var(--rj-muted);
+  color: var(--rj-blue);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--ease-out);
+}
+.chip:hover,
+.chip.active {
+  background: var(--rj-blue);
+  color: var(--rj-white);
+}
+
+/* Status pill variants */
+.pill-hot       { background: #fef3c7; color: #d97706; }
+.pill-qualified { background: var(--rj-muted); color: var(--rj-blue); }
+.pill-booked    { background: #d1fae5; color: #059669; }
+.pill-nurture   { background: #f1f5f9; color: var(--rj-muted-text); }
+
+/* -------------------------------------------------------------------------
+   9. Sticky Nav
+   ------------------------------------------------------------------------- */
+
+.nav-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid var(--rj-line);
+}
+
+/* -------------------------------------------------------------------------
+   10. Radial Glow Utility
+   ------------------------------------------------------------------------- */
+
+.glow-radial {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-radial::after {
+  content: "";
+  position: absolute;
+  right: -150px;
+  top: -150px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.4) 0%, transparent 60%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+/* -------------------------------------------------------------------------
+   11. Layout Helpers
+   ------------------------------------------------------------------------- */
+
+.section { padding: var(--space-20) 0; }
+.container { max-width: 1280px; margin: 0 auto; padding: 0 var(--space-6); }
+
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.flex-between { display: flex; align-items: center; justify-content: space-between; }
+
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6); }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6); }
+
+.kpi-card {
+  background: var(--rj-white);
+  border: 1px solid var(--rj-line);
+  border-radius: var(--radius-card);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-card);
+}
+.kpi-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--rj-blue);
+  box-shadow: var(--shadow-card-hover);
+}
+.kpi-card.featured {
+  background: var(--grad-dark);
+  color: var(--rj-white);
+  border: none;
+}
+
+/* -------------------------------------------------------------------------
+   12. FAQ Accordion (using <details>)
+   ------------------------------------------------------------------------- */
+
+.faq-item {
+  border-bottom: 1px solid var(--rj-line);
+}
+.faq-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5) 0;
+  font-family: var(--font-head);
+  font-size: var(--text-h4);
+  font-weight: var(--weight-h4);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+.faq-summary::-webkit-details-marker { display: none; }
+.faq-summary::after {
+  content: "+";
+  font-size: 24px;
+  color: var(--rj-blue);
+  transition: transform 200ms ease;
+}
+details[open] > .faq-summary::after {
+  content: "−";
+}
+.faq-content {
+  padding-bottom: var(--space-5);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  color: var(--rj-muted-text);
+}
+
+/* -------------------------------------------------------------------------
+   13. Notification Dot
+   ------------------------------------------------------------------------- */
+
+.notification-dot {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  background: var(--rj-danger);
+  border: 2px solid var(--rj-white);
+  border-radius: 50%;
+  display: none;
+}
+.notification-dot.active { display: block; }
+
+/* -------------------------------------------------------------------------
+   14. Progress Bar
+   ------------------------------------------------------------------------- */
+
+.progress-bar {
+  height: 6px;
+  background: var(--rj-line);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+.progress-bar-fill {
+  height: 100%;
+  background: var(--grad-primary);
+  border-radius: var(--radius-pill);
+  transition: width var(--ease-spring);
+}
+
+/* -------------------------------------------------------------------------
+   15. Gradient Text
+   ------------------------------------------------------------------------- */
+
+.gradient-text {
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* -------------------------------------------------------------------------
+   16. Trend Indicators
+   ------------------------------------------------------------------------- */
+
+.trend-up   { color: var(--rj-success); }
+.trend-down { color: var(--rj-danger); }
